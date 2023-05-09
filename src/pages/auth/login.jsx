@@ -1,6 +1,6 @@
-import forside from "../../src/img/forside.png";
-import forsideWeb from "../../src/img/forside-web.png";
-import logo from "../../src/img/logo.png";
+import forside from "../../img/forside.png";
+import forsideWeb from "../../img/forside-web.png";
+import logo from "../../img/logo.png";
 
 export default function Home() {
   return (
