@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import forside from "../../img/forside.png";
 import forsideWeb from "../../img/forside-web.png";
 import logo from "../../img/logo.png";
@@ -15,17 +16,22 @@ export default function Home() {
         src={forsideWeb}
         alt="background"
       />
+      <div>
+        <Link to="/">
+          <button>Tilbage</button>
+        </Link>
+      </div>
 
-      <div className="min-h-screen flex flex-col lg:justify-between items-center pb-5">
+      <div className="min-h-full flex flex-col lg:justify-between items-center pb-5">
         <div>
-          <img className="mx-auto pt-10 px-10" src={logo} alt="logo"></img>
+          <img className="mx-auto pt-4 px-10" src={logo} alt="logo"></img>
         </div>
 
-        <form className="flex flex-col text-white mt-52 w-3/4 lg:w-1/4 lg:pb-20">
+        <form className="flex flex-col text-white mt-52 w-3/4 lg:w-1/4 lg:pb-28">
           <label htmlFor="">E-mail</label>
           <input className="bg-transparent border-b mb-5" type="text" />
           <label htmlFor="">Adgangskode</label>
-          <input className="bg-transparent border-b" type="text" />
+          <input className="bg-transparent border-b" type="password" />
           <a className="text-center mt-6" href="#">
             Glemt din adgangskode?
           </a>

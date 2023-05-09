@@ -25,13 +25,15 @@ export default function Home() {
         </div>
         <div className="lg:pb-40 my-auto lg:my-0 space-x-10">
           <Link to="/login">
-            <button className="border rounded-lg bg-[#1FB9F1] text-white px-10 py-3 lg:px-12 lg:py-4">
+            <button className="border rounded-lg bg-[#1FB9F1] text-white px-10 py-3 lg:px-12 lg:py-4 ">
               Login
             </button>
           </Link>
-          <button className="border rounded-lg bg-white text-[#021965] px-10 py-3 lg:px-12 lg:py-4">
-            Opret
-          </button>
+          <Link to="/new-user">
+            <button className="border rounded-lg bg-white text-[#021965] px-10 py-3 lg:px-12 lg:py-4">
+              Opret
+            </button>
+          </Link>
         </div>
       </div>
     </div>
