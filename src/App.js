@@ -5,6 +5,7 @@ import Login from "./pages/auth/login";
 import NewUser from "./pages/auth/newUser";
 import Menu from "./pages/Menu";
 import Kontakt from "./pages/Kontakt";
+import Matchmaking from "./pages/Matchmaking";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="new-user" element={<NewUser />} />
             <Route path="menu" element={<Menu />} />
             <Route path="kontakt" element={<Kontakt />} />
+            <Route path="matchmaking" element={<Matchmaking />} />
             <Route path="*" />
           </Route>
         </Routes>
