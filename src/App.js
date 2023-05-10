@@ -6,6 +6,7 @@ import NewUser from "./pages/auth/newUser";
 import Menu from "./pages/Menu";
 import Kontakt from "./pages/Kontakt";
 import Matchmaking from "./pages/Matchmaking";
+import Indstillinger from "./pages/Indstillinger";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="menu" element={<Menu />} />
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="matchmaking" element={<Matchmaking />} />
+            <Route path="indstillinger" element={<Indstillinger />} />
             <Route path="*" />
           </Route>
         </Routes>
