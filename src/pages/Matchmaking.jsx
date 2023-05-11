@@ -1,8 +1,40 @@
 import logo from "../img/logo.png";
 import forside from "../img/forside.png";
 import forsideWeb from "../img/forside-web.png";
+import { useState } from "react";
 
 export default function Matchmaking() {
+
+  const [position, setPosition] = useState("");
+  const [budget, setBudget] = useState("");
+  const [grades, setGrades] = useState("");
+  const [atletism, setAtletism] = useState("");
+  const [level, setLevel] = useState("");
+
+  const handlePosition = (event) => {
+    setPosition(event.target.value);
+  };
+  const handleBudget = (event) => {
+    setBudget(event.target.value);
+  };
+  const handleGrades = (event) => {
+    setGrades(event.target.value);
+  };
+  
+  const handleAtletism = (event) => {
+    setAtletism(event.target.value);
+  };
+  
+  const handleLevel = (event) => {
+    setLevel(event.target.value);
+  };
+
+  const handleMatch = (event) => {
+    event.preventDefault()
+    let 
+  }
+
+
   return (
     <div className="min-h-screen flex flex-col justify-between px-10">
             <div>
@@ -49,7 +81,7 @@ export default function Matchmaking() {
               Stoppet
             </option>
           </select>
-          <select name="" id="">
+          <select name="" id="" onChange={handlePosition}>
             <option value="">Position</option>
             <option value="">ST, LB, LCB</option>
             <option value="">RCB, 7/11, GK</option>
@@ -59,16 +91,16 @@ export default function Matchmaking() {
             <option value="">Position</option>
           </select>
 
-          <select name="" id="">
+          <select name="" id="" onChange={handleBudget}>
             <option value="">Budget</option>
             <option value="">0-5000 USD</option>
             <option value="">6-8000 USD</option>
             <option value="">9-11000 USD</option>
             <option value="">12-14000 USD</option>
             <option value="">15-18000 USD</option>
-            <option value="">19k+ USD</option>
+            <option value="">19000+ USD</option>
           </select>
-          <select name="" id="">
+          <select name="" id=""onChange={handleGrades}>
             <option value="">10.5 - 12</option>
             <option value="">8.5 - 10.4</option>
             <option value="">7 - 8.4</option>
@@ -77,7 +109,7 @@ export default function Matchmaking() {
             <option value="">0 - 2.0</option>
           </select>
 
-          <select name="" id="">
+          <select name="" id="" onChange={handleAtletism}>
             <option value="">Athletism</option>
             <option value="">Meget atletisk</option>
             <option value="">Over middel</option>
@@ -86,7 +118,7 @@ export default function Matchmaking() {
             <option value="">Ikke atletisk</option>
             <option value="">Intet</option>
           </select>
-          <select name="" id="">
+          <select name="" id="" onChange={handleLevel}>
             <option value="">Hold niveau</option>
             <option value="">Superliga / 1 Division</option>
             <option value="">2 Division / Liga Top</option>
@@ -98,7 +130,7 @@ export default function Matchmaking() {
         </form>
       </div>
       <div className="mx-auto pb-20">
-        <button className="rounded-xl px-5 py-2 bg-[#14B9F1] text-white">
+        <button className="rounded-xl px-5 py-2 bg-[#14B9F1] text-white" onClick={handleMatch}>
           Find matches
         </button>
       </div>

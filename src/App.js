@@ -7,6 +7,7 @@ import Menu from "./pages/Menu";
 import Kontakt from "./pages/Kontakt";
 import Matchmaking from "./pages/Matchmaking";
 import Indstillinger from "./pages/Indstillinger";
+import Matches from "./pages/Matches";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="matchmaking" element={<Matchmaking />} />
             <Route path="indstillinger" element={<Indstillinger />} />
+            <Route path="matches" element={<Matches />} />
             <Route path="*" />
           </Route>
         </Routes>
