@@ -35,9 +35,11 @@ export default function Home() {
           <a className="text-center mt-6" href="#">
             Glemt din adgangskode?
           </a>
-          <button className="border rounded-lg bg-[#1FB9F1] text-white py-4 mt-10 w-3/5 m-auto">
-            Log ind
-          </button>
+          <Link className="flex justify-center" to="/menu">
+            <button className="border rounded-lg bg-[#1FB9F1] text-white py-4 mt-10 w-3/5 ">
+              Log ind
+            </button>
+          </Link>
         </form>
       </div>
     </div>
