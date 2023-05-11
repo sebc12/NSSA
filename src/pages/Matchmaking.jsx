@@ -16,8 +16,32 @@ export default function Matchmaking() {
             <option className="bg-transparent" value="">
               Spiller status
             </option>
+            <option className="bg-transparent" value="">
+              Stjerne
+            </option>
+            <option className="bg-transparent" value="">
+              Profil
+            </option>
+            <option className="bg-transparent" value="">
+              Fastmand
+            </option>
+            <option className="bg-transparent" value="">
+              Rotation
+            </option>
+            <option className="bg-transparent" value="">
+              Reserve
+            </option>
+            <option className="bg-transparent" value="">
+              Stoppet
+            </option>
           </select>
           <select name="" id="">
+            <option value="">Position</option>
+            <option value="">ST, LB, LCB</option>
+            <option value="">RCB, 7/11, GK</option>
+            <option value="">Position</option>
+            <option value="">Position</option>
+            <option value="">Position</option>
             <option value="">Position</option>
           </select>
 
