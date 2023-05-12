@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 import forside from "../img/forside.png";
 import forsideWeb from "../img/forside-web.png";
 import logo from "../img/logo.png";
-import matchmakingBg from "../img/forside-web.png";
-import settingsBg from "../img/forside-web.png";
-import contactBg from "../img/forside-web.png";
 
-export default function Menu() {
+export default function Indstillinger() {
   return (
     <div className="min-h-screen">
       <div>
@@ -22,35 +19,51 @@ export default function Menu() {
         />
       </div>
 
-      <div className="min-h-screen flex flex-col lg:justify-between items-center">
+      <div className="min-h-screen">
         <div>
-            <img className="mx-auto pt-1 px-10 w-200 h-10" src={logo} alt="logo"></img>
+          <Link to="/menu">
+            <img className="mx-auto pt-2 px-1 w-200 h-10" src={logo} alt="logo"></img>
+          </Link>
         </div>
-        <div className="lg:pb-40 my-auto lg:my-0 space-x-10">
-        <Link to="/Matchmaking">
-            <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${matchmakingBg})`, backgroundSize: "cover" }}
+        <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow">
+          <div className="text-white h-full py-10 px-4">
+            <Link
+              to="/change-info"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
-              <span className="px-4 py-2 rounded-md text-5xl">MATCHMAKING</span>
-            </div>
-          </Link>
-          <Link to="/Indstillinger">
-            <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${settingsBg})`, backgroundSize: "cover" }}
+              Change Info
+            </Link>
+            <Link
+              to="/help"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
-              <span className="px-4 py-2 rounded-md text-5xl">INDSTILLINGER</span>
-            </div>
-          </Link>
-          <Link to="/Kontakt">
-            <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${contactBg})`, backgroundSize: "cover" }}
+              Help
+            </Link>
+            <Link
+              to="/feedback"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
-              <span className="px-4 py-2 rounded-md text-5xl">KONTAKT</span>
-            </div>
-          </Link>
+              Give Us Feedback
+            </Link>
+            <Link
+              to="/feedback"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
+            >
+              Give Us Feedback
+            </Link>
+            <Link
+              to="/feedback"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
+            >
+              Give Us Feedback
+            </Link>
+            <Link
+              to="/feedback"
+              className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
+            >
+              Give Us Feedback
+            </Link>
+          </div>
         </div>
       </div>
     </div>
