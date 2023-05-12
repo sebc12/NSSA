@@ -15,6 +15,7 @@ export default function Matchmaking() {
   const [atletism, setAtletism] = useState("");
   const [level, setLevel] = useState("");
   const [test, setTest] = useState("");
+  const [showmatch, setShowmatch] = useState("");
 
   const [matches, setMatches] = useState([]);
 
@@ -87,24 +88,26 @@ export default function Matchmaking() {
     };
 
     if (validateMatch(match)) {
+      return setShowmatch(true);
     }
   };
+  console.log(handleMatch());
 
   return (
-    <div className="min-h-screen flex flex-col justify-between px-10">
+    <div className="min-h-screen flex flex-col justify-between">
       <div>
         <img
-          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
+          className="object-cover bg-no-repeat h-screen w-screen absolute -z-10 lg:hidden"
           src={forside}
           alt=""
         />
         <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
+          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-screen lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
           src={forsideWeb}
           alt=""
         />
       </div>
-      <div>
+      <div className="px-10">
         <img className="mx-auto pt-5 h-16" src={logo} alt="logo"></img>
         <h1 className="text-center text-4xl my-10 text-white">
           SPECIFIKATIONER
@@ -185,6 +188,7 @@ export default function Matchmaking() {
           Find matches
         </button>
       </div>
+      {showmatch && <p>Lokalet er desværre optaget. Prøv et andet.</p>}
     </div>
   );
 }

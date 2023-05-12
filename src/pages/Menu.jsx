@@ -24,13 +24,20 @@ export default function Menu() {
 
       <div className="min-h-screen flex flex-col lg:justify-between items-center">
         <div>
-            <img className="mx-auto pt-1 px-10 w-200 h-10" src={logo} alt="logo"></img>
+          <img
+            className="mx-auto pt-1 px-10 w-200 h-10"
+            src={logo}
+            alt="logo"
+          ></img>
         </div>
         <div className="lg:pb-40 my-auto lg:my-0 space-x-10">
-        <Link to="/Matchmaking">
+          <Link to="/Matchmaking">
             <div
               className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${matchmakingBg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${matchmakingBg})`,
+                backgroundSize: "cover",
+              }}
             >
               <span className="px-4 py-2 rounded-md text-5xl">MATCHMAKING</span>
             </div>
@@ -38,15 +45,23 @@ export default function Menu() {
           <Link to="/Indstillinger">
             <div
               className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${settingsBg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${settingsBg})`,
+                backgroundSize: "cover",
+              }}
             >
-              <span className="px-4 py-2 rounded-md text-5xl">INDSTILLINGER</span>
+              <span className="px-4 py-2 rounded-md text-5xl">
+                INDSTILLINGER
+              </span>
             </div>
           </Link>
           <Link to="/Kontakt">
             <div
               className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40 w-full transition duration-300 ease-in-out transform hover:scale-105"
-              style={{ backgroundImage: `url(${contactBg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${contactBg})`,
+                backgroundSize: "cover",
+              }}
             >
               <span className="px-4 py-2 rounded-md text-5xl">KONTAKT</span>
             </div>
