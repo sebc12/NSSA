@@ -216,15 +216,24 @@ export default function Matchmaking() {
         onRequestClose={closeModal}
         contentLabel="Create booking form"
       >
-        <span onClick={closeModal}>&times;</span>
-        <div className="w-1/3 bg-white flex space-x-5 mx-auto">
-          {schools.map((school) => (
-            <div key={school.id}>
-              <h1>{school.name}</h1>
-              <h3>{school.text}</h3>
-            </div>
-          ))}
+        <div className="">
+          <span onClick={closeModal}>&times;</span>
+          <div className="grid grid-cols-4 gap-4 px-10">
+            {schools.map((school) => (
+              <div className="border p-5">
+                <h1 className="text-3xl mb-3">{school.name}</h1>
+                <h3>{school.text}</h3>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <button
+          onClick={closeModal}
+          className="border rounded-3xl m-auto w-1/6 py-2 bg-[#14B9F1] text-white"
+        >
+          Ændre specifikationerne
+        </button>
       </Modal>
     </div>
   );
