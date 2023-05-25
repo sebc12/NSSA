@@ -203,7 +203,7 @@ export default function Matchmaking() {
       </div>
       <div className="flex flex-col w-2/5 mx-auto">
         <button
-          className="rounded-xl w-1/3 mx-auto px-5 py-2 bg-[#14B9F1] text-white"
+          className="rounded-xl lg:w-1/3 mx-auto px-5 py-2 bg-[#14B9F1] text-white"
           onClick={openModal}
         >
           Find matches
@@ -216,24 +216,26 @@ export default function Matchmaking() {
         onRequestClose={closeModal}
         contentLabel="Create booking form"
       >
-        <div className="">
-          <span onClick={closeModal}>&times;</span>
-          <div className="grid grid-cols-4 gap-4 px-10">
-            {schools.map((school) => (
-              <div className="border p-5">
-                <h1 className="text-3xl mb-3">{school.name}</h1>
-                <h3>{school.text}</h3>
-              </div>
-            ))}
-          </div>
+        <span onClick={closeModal} className="cursor-pointer">
+          &times;
+        </span>
+        <div className="lg:grid lg:grid-cols-4 lg:gap-4 lg:px-10 lg:space-y-0 space-y-5">
+          {schools.map((school) => (
+            <div className="border p-5">
+              <h1 className="text-3xl mb-3">{school.name}</h1>
+              <h3>{school.text}</h3>
+            </div>
+          ))}
         </div>
 
-        <button
-          onClick={closeModal}
-          className="border rounded-3xl m-auto w-1/6 py-2 bg-[#14B9F1] text-white"
-        >
-          Ændre specifikationerne
-        </button>
+        <div className="w-full flex lg:mt-10 mt-5 pb-5">
+          <button
+            onClick={closeModal}
+            className="border rounded-3xl w-full lg:mx-auto lg:w-1/6 py-2 bg-[#14B9F1] text-white"
+          >
+            Ændre specifikationerne
+          </button>
+        </div>
       </Modal>
     </div>
   );

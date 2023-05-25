@@ -22,10 +22,14 @@ export default function Indstillinger() {
       <div className="min-h-screen">
         <div>
           <Link to="/menu">
-            <img className="mx-auto pt-2 px-1 w-200 h-10" src={logo} alt="logo"></img>
+            <img
+              className="mx-auto pt-2 px-1 w-200 h-10"
+              src={logo}
+              alt="logo"
+            ></img>
           </Link>
         </div>
-        <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow">
+        <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow lg:w-1/2 lg:mx-auto">
           <div className="text-white h-full py-10 px-4">
             <Link
               to="/change-info"
