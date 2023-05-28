@@ -5,7 +5,9 @@ import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import Modal from "react-modal";
-import { getConfig } from "@testing-library/react";
+import { FaArrowLeft } from "react-icons/fa";
+import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBJE7RELfxwUlkjbEHTbuS5ahokAQbNow4",
@@ -113,8 +115,15 @@ export default function Matchmaking() {
           alt=""
         />
       </div>
-      <div className="px-10 py-20">
-        <img className="mx-auto pt-5 h-16" src={logo} alt="logo"></img>
+      <div className="px-5 py-10">
+        <div className="flex items-center text-white text-2xl lg:px-5">
+          <Link to="/Menu">
+            <FaArrowLeft />
+          </Link>
+          <Link to="/Menu" className="mx-auto">
+            <img className=" h-10" src={logo} alt="logo"></img>
+          </Link>
+        </div>
         <h1 className="text-center text-4xl my-10 text-white">
           SPECIFIKATIONER
         </h1>
@@ -123,6 +132,7 @@ export default function Matchmaking() {
           className="grid grid-cols-2 gap-x-5 gap-y-10 lg:w-2/6 lg:m-auto"
         >
           <select
+            className="p-2"
             name=""
             id=""
             onChange={(event) => handleDropdownChange(event, "status")}
@@ -139,6 +149,7 @@ export default function Matchmaking() {
           </select>
 
           <select
+            className="p-2"
             name=""
             id=""
             onChange={(event) => handleDropdownChange(event, "budget")}
@@ -154,6 +165,7 @@ export default function Matchmaking() {
             <option value={5000}>0-5000 USD</option>
           </select>
           <select
+            className="p-2"
             name=""
             id=""
             onChange={(event) => handleDropdownChange(event, "grades")}
@@ -170,6 +182,7 @@ export default function Matchmaking() {
           </select>
 
           <select
+            className="p-2"
             name=""
             id=""
             onChange={(event) => handleDropdownChange(event, "atletism")}
@@ -185,6 +198,7 @@ export default function Matchmaking() {
             <option value={1}>Intet</option>
           </select>
           <select
+            className="p-2"
             name=""
             id=""
             onChange={(event) => handleDropdownChange(event, "level")}
@@ -216,10 +230,10 @@ export default function Matchmaking() {
         onRequestClose={closeModal}
         contentLabel="Create booking form"
       >
-        <span onClick={closeModal} className="cursor-pointer">
+        <span onClick={closeModal} className="cursor-pointer text-2xl p-3">
           &times;
         </span>
-        <div className="lg:grid lg:grid-cols-4 lg:gap-4 lg:px-10 lg:space-y-0 space-y-5">
+        <div className="lg:grid lg:grid-cols-4 lg:gap-4 lg:px-10 lg:space-y-0 space-y-5 pt-5">
           {schools.map((school) => (
             <div className="border p-5">
               <h1 className="text-3xl mb-3">{school.name}</h1>
