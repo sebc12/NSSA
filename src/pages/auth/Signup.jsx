@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import forside from "../../img/forside.png";
+import forsideWeb from "../../img/forside-web.png";
 import { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
+import logo from "../../img/logo.png";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -90,35 +93,39 @@ export default function SignUp() {
   };
   return (
     <div>
-      <img
-        className="bg-cover bg-no-repeat min-h-screen min-w-screen absolute -z-10 lg:hidden"
-        src={forside}
-        alt="background"
-      />
-      <img
-        className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-        src={forside}
-        alt="background"
-      />
       <div>
+        <img
+          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
+          src={forside}
+          alt=""
+        />
+        <img
+          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
+          src={forsideWeb}
+          alt=""
+        />
+      </div>
+      <div className="flex items-center text-white text-2xl mx-10 pt-10 lg:px-5">
         <Link to="/">
-          <button>Tilbage</button>
+          <FaArrowLeft />
+        </Link>
+        <Link to="/Menu" className="w-full flex justify-center mr-6">
+          <img className="px-10" src={logo} alt="logo"></img>
         </Link>
       </div>
-      <div className="pt-10">
+      <div className="pt-5">
         <div className="w-full flex justify-center text-4xl text-white">
           <h1>OPRET BRUGER</h1>
         </div>
         <form
           action=""
-          className="px-5 py-5 flex flex-col text-white mt-40 lg:w-2/5 lg:mx-auto"
+          className="px-5 py-5 flex flex-col text-white mt-20 lg:w-2/5 lg:mx-auto"
         >
           <label htmlFor="">Fornavn & efternavn</label>
           <input
             className="bg-transparent border-b mb-5"
             type="text"
             onChange={handleName}
-            required
           />
           {isError.name && <p className="text-black">Skal udfyldes</p>}
 

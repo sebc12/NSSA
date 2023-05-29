@@ -7,16 +7,6 @@ import settingsBg from "../img/forside-web.png";
 import contactBg from "../img/forside-web.png";
 
 export default function Menu(token) {
-  const navigate = useNavigate();
-  const isLoggedIn = token;
-
-  if (token == "") {
-    // Redirect to the login page or show an access denied message
-    return navigate("/Signin");
-    // Alternatively, you can render an access denied component
-    // return <AccessDenied />;
-  }
-
   return (
     <div className="min-h-screen">
       <div>
@@ -32,14 +22,14 @@ export default function Menu(token) {
         />
       </div>
 
-      <div className="min-h-screen flex flex-col lg:justify-between items-center pt-5">
+      <div className="min-h-screen flex flex-col pt-5 px-5">
         <div>
-          <img className="mx-auto h-10" src={logo} alt="logo"></img>
+          <img className="mx-auto lg:px-10 mb-40" src={logo} alt="logo"></img>
         </div>
-        <div className="lg:pb-20 pt-10 lg:my-0 space-x-10 w-full lg:w-2/5 px-5">
+        <div className="lg:flex lg:justify-center lg:items-center lg:my-0 space-x-10 w-full">
           <Link to="/Matchmaking">
             <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40  transition duration-300 ease-in-out transform hover:scale-105"
+              className="flex-1 border rounded-3xl text-white cursor-pointer  py-3  lg:py-4 flex items-center justify-center h-40 lg:w-96 transition duration-300 ease-in-out transform hover:scale-105"
               style={{
                 backgroundImage: `url(${matchmakingBg})`,
                 backgroundSize: "cover",
@@ -50,7 +40,7 @@ export default function Menu(token) {
           </Link>
           <Link to="/Indstillinger">
             <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40  transition duration-300 ease-in-out transform hover:scale-105"
+              className="flex-1 border rounded-3xl text-white cursor-pointer  py-3  lg:py-4 flex items-center justify-center h-40 lg:w-96  transition duration-300 ease-in-out transform hover:scale-105"
               style={{
                 backgroundImage: `url(${settingsBg})`,
                 backgroundSize: "cover",
@@ -63,7 +53,7 @@ export default function Menu(token) {
           </Link>
           <Link to="/Kontakt">
             <div
-              className="flex-1 border rounded-3xl text-white cursor-pointer px-5 py-3 lg:px-12 lg:py-4 flex items-center justify-center h-40  transition duration-300 ease-in-out transform hover:scale-105"
+              className="flex-1 border rounded-3xl text-white cursor-pointer  py-3  lg:py-4 flex items-center justify-center h-40 lg:w-96 transition duration-300 ease-in-out transform hover:scale-105"
               style={{
                 backgroundImage: `url(${contactBg})`,
                 backgroundSize: "cover",

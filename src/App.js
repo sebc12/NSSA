@@ -9,6 +9,7 @@ import Matchmaking from "./pages/Matchmaking";
 import Indstillinger from "./pages/Indstillinger";
 import Matches from "./pages/Matches";
 import { useState } from "react";
+import PrivateRoute from "../src/componment/PrivateRoute";
 
 function App() {
   const [token, setToken] = useState("");
@@ -23,11 +24,14 @@ function App() {
               element={<Signin token={token} setToken={setToken} />}
             />
             <Route path="signup" element={<Signup />} />
-            <Route path="menu" element={<Menu token={token} />} />
-            <Route path="kontakt" element={<Kontakt />} />
-            <Route path="matchmaking" element={<Matchmaking />} />
-            <Route path="indstillinger" element={<Indstillinger />} />
-            <Route path="matches" element={<Matches />} />
+            <Route element={<PrivateRoute token={token} />}>
+              <Route path="menu" element={<Menu />} />
+              <Route path="kontakt" element={<Kontakt />} />
+              <Route path="matchmaking" element={<Matchmaking />} />
+              <Route path="indstillinger" element={<Indstillinger />} />
+              <Route path="matches" element={<Matches />} />
+            </Route>
+
             <Route path="*" />
           </Route>
         </Routes>

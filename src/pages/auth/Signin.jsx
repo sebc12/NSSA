@@ -3,8 +3,9 @@ import forside from "../../img/forside.png";
 import forsideWeb from "../../img/forside-web.png";
 import logo from "../../img/logo.png";
 import { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 
-export default function Home(props) {
+export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isError, setIsError] = useState({
@@ -79,34 +80,36 @@ export default function Home(props) {
       setIsError((prevState) => ({ ...prevState, valid: true }));
       return;
     }
-    props.setToken(result.idToken);
-    console.log(props.setToken);
+
+    localStorage.setItem("token", result.idToken);
+
     navigate("/Menu");
   };
   return (
     <div>
-      <img
-        className="bg-cover bg-no-repeat min-h-screen min-w-screen absolute -z-10 lg:hidden"
-        src={forside}
-        alt="background"
-      />
-      <img
-        className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-        src={forsideWeb}
-        alt="background"
-      />
       <div>
+        <img
+          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
+          src={forside}
+          alt=""
+        />
+        <img
+          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
+          src={forsideWeb}
+          alt=""
+        />
+      </div>
+      <div className="flex items-center text-white text-2xl mx-10 pt-10 mb-40 lg:px-5">
         <Link to="/">
-          <button>Tilbage</button>
+          <FaArrowLeft />
+        </Link>
+        <Link to="/Menu" className="w-full flex justify-center mr-6">
+          <img className="px-10" src={logo} alt="logo"></img>
         </Link>
       </div>
 
-      <div className=" flex flex-col  items-center ">
-        <div>
-          <img className="mx-auto pt-4 mb-32" src={logo} alt="logo"></img>
-        </div>
-
-        <form className="flex flex-col text-white w-3/4 lg:w-1/4 lg:pb-20">
+      <div className="flex flex-col items-center ">
+        <form className="flex flex-col text-white w-3/4 lg:w-1/4 ">
           <label htmlFor="">E-mail</label>
           <input
             className="bg-transparent border-b mb-5"

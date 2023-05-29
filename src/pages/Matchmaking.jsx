@@ -124,7 +124,7 @@ export default function Matchmaking() {
             <img className=" h-10" src={logo} alt="logo"></img>
           </Link>
         </div>
-        <h1 className="text-center text-4xl my-10 text-white">
+        <h1 className="text-center text-4xl my-20 text-white">
           SPECIFIKATIONER
         </h1>
         <form

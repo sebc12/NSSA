@@ -28,7 +28,7 @@ export default function Kontakt() {
           måske kan hjælpe dig? Ring eller skriv til os på email og vi vil gøre
           alt vi kan for at være behjælpelige.{" "}
         </p>
-        <div className="lg:flex lg:space-x-20 lg:mt-20">
+        <div className="md:flex md:space-x-20 md:mt-20 ">
           <div className="bg-[#0075BE] flex flex-col items-center justify-between py-4 h-32 w-52 rounded-2xl mt-5 lg:mt-0">
             <h3 className=" text-5xl">
               <FaPhone />
@@ -41,7 +41,7 @@ export default function Kontakt() {
             </h3>
             <h3>Hello@nssa.dk</h3>
           </div>
-          <div className="bg-[#0075BE] flex flex-col items-center justify-between py-4 h-32 w-52 rounded-2xl">
+          <div className="bg-[#0075BE] flex flex-col items-center justify-between py-4 h-32 w-52 md:mt-5 lg:mt-0 rounded-2xl">
             <h3 className="  text-5xl">
               <FaHome />
             </h3>
