@@ -6,7 +6,6 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import Modal from "react-modal";
 import { FaArrowLeft } from "react-icons/fa";
-import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
 const firebaseConfig = {
@@ -33,9 +32,14 @@ export default function Matchmaking() {
     level: "",
   });
 
+  // Vi henter data. effekten bliver udløst, når værdien af selectedCriteria ændrer sig.
+
   useEffect(() => {
     fetchDataFromFirebase();
   }, [selectedCriteria]);
+
+  //Henter brugerens input. Vi tager den tidligere værdi af selectedCriteria, og med spredningsoperatoren opretter vi et nyt object.
+  //criterion bliver brugt til at opdatere variablerne i selectedCriteria. eksempel "status"
 
   const handleDropdownChange = (event, criterion) => {
     setSelectedCriteria((prevCriteria) => ({
@@ -59,13 +63,17 @@ export default function Matchmaking() {
     return validate;
   }
 
+  //henter data fra firebase
   const fetchDataFromFirebase = () => {
     const firebaseRef = firebase.database().ref("Schools");
 
     firebaseRef
+      //henter dataene én gang fra Firebase-databasen
       .once("value")
       .then((snapshot) => {
+        //returnerer dataene som en JavaScript-objektstruktur
         const firebaseData = snapshot.val();
+        //konverterer objektets værdier til et array
         const schoolsArray = firebaseData ? Object.values(firebaseData) : [];
 
         const filteredSchools = schoolsArray.filter((school) => {
@@ -81,7 +89,7 @@ export default function Matchmaking() {
         return setSchools(filteredSchools);
       })
       .catch((error) => {
-        console.error("Error fetching movies:", error);
+        console.error("Error:", error);
       });
   };
 
