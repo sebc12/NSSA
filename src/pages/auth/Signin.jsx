@@ -131,9 +131,6 @@ export default function Home() {
           {isError.valid && (
             <p className="text-black">Forkert email eller kode</p>
           )}
-          <a className="text-center mt-6" href="#">
-            Glemt din adgangskode?
-          </a>
 
           <button
             onClick={handleSignin}

@@ -5,8 +5,14 @@ import logo from "../img/logo.png";
 import matchmakingBg from "../img/forside-web.png";
 import settingsBg from "../img/forside-web.png";
 import contactBg from "../img/forside-web.png";
+import { FaSignOutAlt } from "react-icons/fa";
 
-export default function Menu(token) {
+export default function Menu() {
+  const navigate = useNavigate();
+  const handleSignout = () => {
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <div className="min-h-screen">
       <div>
@@ -22,11 +28,18 @@ export default function Menu(token) {
         />
       </div>
 
-      <div className="min-h-screen flex flex-col pt-5 px-5">
-        <div>
-          <img className="mx-auto lg:px-10 mb-40" src={logo} alt="logo"></img>
+      <div className="min-h-screen flex flex-col pt-5 px-5 lg:px-16">
+        <div className="flex mb-40">
+          <img className="mx-auto lg:px-10 " src={logo} alt="logo"></img>
+
+          <button
+            onClick={handleSignout}
+            className="flex items-start lg:pt-10 text-3xl text-white"
+          >
+            <FaSignOutAlt />
+          </button>
         </div>
-        <div className="lg:flex lg:justify-center lg:items-center lg:my-0 space-x-10 w-full">
+        <div className="lg:flex lg:justify-center lg:items-center lg:my-0 space-x-10 w-full md:w-2/3 md:mx-auto">
           <Link to="/Matchmaking">
             <div
               className="flex-1 border rounded-3xl text-white cursor-pointer  py-3  lg:py-4 flex items-center justify-center h-40 lg:w-96 transition duration-300 ease-in-out transform hover:scale-105"
