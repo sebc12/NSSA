@@ -131,9 +131,9 @@ export default function Matchmaking() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <h1 className="text-4xl text-white">Matchsøgning</h1>
+          <h1 className="font-ibm text-4xl text-white">Matchsøgning</h1>
         </div>
-        <h1 className="text-center text-4xl my-20 text-white">
+        <h1 className="font-ibm text-center text-4xl my-20 text-white">
           SPECIFIKATIONER
         </h1>
         <form

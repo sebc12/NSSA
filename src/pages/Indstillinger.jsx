@@ -28,11 +28,11 @@ export default function Indstillinger() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <h1 className="text-4xl text-white">Indstillinger</h1>
+          <h1 className="font-ibm text-4xl text-white">Indstillinger</h1>
         </div>
 
         <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow lg:w-1/2 lg:mx-auto">
-          <div className="text-white h-full py-10">
+          <div className="font-ibm text-white h-full py-10">
             <Link
               to="/change-info"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"

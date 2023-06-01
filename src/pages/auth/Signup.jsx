@@ -121,12 +121,12 @@ export default function SignUp() {
         </div>
       </div>
       <div className="flex justify-center">
-        <h1 className="text-4xl text-white">OPRET BRUGER</h1>
+        <h1 className="font-ibm text-4xl text-white">OPRET BRUGER</h1>
       </div>
       <div className="pt-5 flex justify-center">
         <form
           action=""
-          className="px-5 py-5 flex flex-col text-white mt-20 lg:w-2/5 lg:mx-auto"
+          className="font-ibm px-5 py-5 flex flex-col text-white mt-20 lg:w-2/5 lg:mx-auto"
         >
           <label htmlFor="">Fornavn & efternavn</label>
           <input

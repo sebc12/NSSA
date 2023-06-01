@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ibm: ['"IBM Plex Sans"'],
+        Montserrat: ['"Montserrat"'],
+      },
+    },
   },
   plugins: [],
 };

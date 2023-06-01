@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center ">
-        <form className="flex flex-col text-white w-3/4 lg:w-1/4 ">
+        <form className="font-ibm flex flex-col text-white w-3/4 lg:w-1/4 ">
           <label htmlFor="">E-mail</label>
           <input
             className="bg-transparent border-b mb-5"

@@ -38,7 +38,7 @@ export default function Menu() {
           </button>
         </div>
         <div className="flex justify-center mb-20 lg:mb-40">
-          <h1 className="text-4xl text-white">Atlet</h1>
+          <h1 className="font-ibm text-4xl text-white">Atlet</h1>
         </div>
         <div className="lg:flex lg:justify-center lg:items-center lg:my-0 space-x-10 w-full md:w-2/3 md:mx-auto">
           <Link to="/Indstillinger">

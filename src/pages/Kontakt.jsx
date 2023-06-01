@@ -32,13 +32,13 @@ export default function Kontakt() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <h1 className="text-4xl text-white">Kontakt</h1>
+          <h1 className="font-ibm text-4xl text-white">Kontakt</h1>
         </div>
         <div className="flex flex-col items-center pb-5">
           <h1 className="my-10 text-3xl lg:text-5xl lg:mb-20">
             Nysgerrig på noget?
           </h1>
-          <p className="lg:w-2/5">
+          <p className="font-Montserrat lg:w-2/5">
             Her i NSSA arbejder vi med unge atleter, trænere, colleges og
             klubber fra hele verden i forskellige tidszoner. Har du spørgsmål om
             det vi gør, vores klienter eller blot vil vide mere om college og
