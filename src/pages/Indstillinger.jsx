@@ -6,28 +6,29 @@ import { FaArrowLeft } from "react-icons/fa";
 
 export default function Indstillinger() {
   return (
-    <div className="min-h-screen">
-      <div>
-        <img
-          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
-          src={forside}
-          alt=""
-        />
-        <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-          src={forsideWeb}
-          alt=""
-        />
-      </div>
+    <div className="min-h-screen relative">
+      <img
+        className="object-cover h-full w-full absolute top-0 left-0 -z-10 lg:hidden"
+        src={forside}
+        alt=""
+      />
+      <img
+        className="lg:object-cover h-full w-full absolute top-0 left-0 -z-10 hidden lg:block"
+        src={forsideWeb}
+        alt=""
+      />
 
       <div className="min-h-screen px-5 py-10">
-        <div className="flex items-center text-white text-2xl lg:px-5">
+        <div className="flex justify-between items-center text-white text-2xl mb-10 lg:mb-0 lg:px-5">
           <Link to="/Menu">
             <FaArrowLeft />
           </Link>
-          <Link to="/Menu" className="mx-auto">
+          <Link to="/Menu">
             <img className="h-10" src={logo} alt="logo"></img>
           </Link>
+        </div>
+        <div className="flex justify-center">
+          <h1 className="text-4xl text-white">Indstillinger</h1>
         </div>
 
         <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow lg:w-1/2 lg:mx-auto">

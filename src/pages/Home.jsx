@@ -5,19 +5,17 @@ import logo from "../img/logo.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <div>
-        <img
-          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
-          src={forside}
-          alt=""
-        />
-        <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-          src={forsideWeb}
-          alt=""
-        />
-      </div>
+    <div className="min-h-screen relative">
+      <img
+        className="object-cover h-full w-full absolute top-0 left-0 -z-10 lg:hidden"
+        src={forside}
+        alt=""
+      />
+      <img
+        className="lg:object-cover h-full w-full absolute top-0 left-0 -z-10 hidden lg:block"
+        src={forsideWeb}
+        alt=""
+      />
 
       <div className="min-h-screen flex flex-col lg:justify-between items-center">
         <div>

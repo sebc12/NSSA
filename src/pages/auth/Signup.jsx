@@ -33,6 +33,9 @@ export default function SignUp() {
     return /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(email);
   }
 
+  //Vi tjekker om der er nogle fejl. Hvis der er fejl i "name", så bliver det sat til true.
+  //Vi bruger ...prevstate, så vi ikke ændre i andre variabler i "isError"
+
   function checkForm() {
     resetError();
     let validated = true;
@@ -44,7 +47,7 @@ export default function SignUp() {
       setIsError((prevState) => ({ ...prevState, email: true }));
       validated = false;
     }
-    if (password.length < 5) {
+    if (password.length <= 5) {
       setIsError((prevState) => ({ ...prevState, password: true }));
       validated = false;
     }
@@ -85,6 +88,7 @@ export default function SignUp() {
     const result = await response.json();
     console.log(result);
 
+    //Hvis der sker en fejl, eksempel, at mail er optaget, så får vi en fejl
     if (result.error) {
       setIsError((prevState) => ({ ...prevState, valid: true }));
       return;
@@ -92,31 +96,34 @@ export default function SignUp() {
     navigate("/signin");
   };
   return (
-    <div>
-      <div>
-        <img
-          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
-          src={forside}
-          alt=""
-        />
-        <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-          src={forsideWeb}
-          alt=""
-        />
-      </div>
-      <div className="flex items-center text-white text-2xl mx-10 pt-10 lg:px-5">
-        <Link to="/">
-          <FaArrowLeft />
-        </Link>
-        <Link to="/Menu" className="w-full flex justify-center mr-6">
-          <img className="px-10" src={logo} alt="logo"></img>
-        </Link>
-      </div>
-      <div className="pt-5">
-        <div className="w-full flex justify-center text-4xl text-white">
-          <h1>OPRET BRUGER</h1>
+    <div className="min-h-screen relative">
+      <img
+        className="object-cover h-full w-full absolute top-0 left-0 -z-10 lg:hidden"
+        src={forside}
+        alt=""
+      />
+      <img
+        className="lg:object-cover h-full w-full absolute top-0 left-0 -z-10 hidden lg:block"
+        src={forsideWeb}
+        alt=""
+      />
+      <div className="flex lg:justify-between items-center text-white text-3xl mx-5 pt-5 lg:mx-10 lg:pt-10 ">
+        <div>
+          <Link to="/">
+            <FaArrowLeft />
+          </Link>
         </div>
+
+        <div className="hidden lg:block">
+          <Link to="/Menu">
+            <img className="h-10" src={logo} alt="logo"></img>
+          </Link>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <h1 className="text-4xl text-white">OPRET BRUGER</h1>
+      </div>
+      <div className="pt-5 flex justify-center">
         <form
           action=""
           className="px-5 py-5 flex flex-col text-white mt-20 lg:w-2/5 lg:mx-auto"

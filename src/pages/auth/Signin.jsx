@@ -12,8 +12,8 @@ export default function Home() {
     name: false,
     email: false,
     password: false,
-    valid: false,
   });
+  const [mailError, setMailError] = useState(false);
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
@@ -36,7 +36,7 @@ export default function Home() {
       setIsError((prevState) => ({ ...prevState, email: true }));
       validated = false;
     }
-    if (password.length < 5) {
+    if (password.length <= 5) {
       setIsError((prevState) => ({ ...prevState, password: true }));
       validated = false;
     }
@@ -77,7 +77,7 @@ export default function Home() {
     console.log(result);
 
     if (result.error) {
-      setIsError((prevState) => ({ ...prevState, valid: true }));
+      setMailError(true);
       return;
     }
 
@@ -86,19 +86,17 @@ export default function Home() {
     navigate("/Menu");
   };
   return (
-    <div>
-      <div>
-        <img
-          className="object-cover bg-left bg-no-repeat h-full w-full absolute -z-10 lg:hidden"
-          src={forside}
-          alt=""
-        />
-        <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-full lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-          src={forsideWeb}
-          alt=""
-        />
-      </div>
+    <div className="min-h-screen relative">
+      <img
+        className="object-cover h-full w-full absolute top-0 left-0 -z-10 lg:hidden"
+        src={forside}
+        alt=""
+      />
+      <img
+        className="lg:object-cover h-full w-full absolute top-0 left-0 -z-10 hidden lg:block"
+        src={forsideWeb}
+        alt=""
+      />
       <div className="flex items-center text-white text-2xl mx-10 pt-10 mb-40 lg:px-5">
         <Link to="/">
           <FaArrowLeft />
@@ -128,9 +126,7 @@ export default function Home() {
           {isError.password && (
             <p className="text-black">Adgangskoden skal være min. 6 tegn</p>
           )}
-          {isError.valid && (
-            <p className="text-black">Forkert email eller kode</p>
-          )}
+          {mailError && <p className="text-black">Forkert email eller kode</p>}
 
           <button
             onClick={handleSignin}

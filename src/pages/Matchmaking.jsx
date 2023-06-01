@@ -110,27 +110,28 @@ export default function Matchmaking() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div>
-        <img
-          className="object-cover bg-no-repeat h-screen w-screen absolute -z-10 lg:hidden"
-          src={forside}
-          alt=""
-        />
-        <img
-          className="lg:object-cover lg:bg-center lg:bg-no-repeat lg:h-screen lg:w-full lg:absolute  lg:-z-10 hidden lg:block"
-          src={forsideWeb}
-          alt=""
-        />
-      </div>
+    <div className="min-h-screen relative">
+      <img
+        className="object-cover h-full w-full absolute top-0 left-0 -z-10 lg:hidden"
+        src={forside}
+        alt=""
+      />
+      <img
+        className="lg:object-cover h-full w-full absolute top-0 left-0 -z-10 hidden lg:block"
+        src={forsideWeb}
+        alt=""
+      />
       <div className="px-5 py-10">
-        <div className="flex items-center text-white text-2xl lg:px-5">
+        <div className="flex justify-between items-center text-white text-2xl mb-10 lg:mb-0 lg:px-5">
           <Link to="/Menu">
             <FaArrowLeft />
           </Link>
-          <Link to="/Menu" className="mx-auto">
+          <Link to="/Menu">
             <img className=" h-10" src={logo} alt="logo"></img>
           </Link>
+        </div>
+        <div className="flex justify-center">
+          <h1 className="text-4xl text-white">Matchsøgning</h1>
         </div>
         <h1 className="text-center text-4xl my-20 text-white">
           SPECIFIKATIONER
@@ -179,7 +180,7 @@ export default function Matchmaking() {
             onChange={(event) => handleDropdownChange(event, "grades")}
           >
             <option value="" disabled selected hidden>
-              Karakter
+              Akademisk
             </option>
             <option value={6}>10.5 - 12</option>
             <option value={5}>8.5 - 10.4</option>
@@ -222,17 +223,17 @@ export default function Matchmaking() {
             <option value={1}>Ingen betydende CV</option>
           </select>
         </form>
-      </div>
-      <div className="flex flex-col w-2/5 mx-auto">
-        <button
-          className="rounded-xl lg:w-1/3 mx-auto px-5 py-2 bg-[#14B9F1] text-white"
-          onClick={openModal}
-        >
-          Find matches
-        </button>
-        {isError && <p className="text-center mt-5 ">Udfyld felterne</p>}
-      </div>
 
+        <div className="flex flex-col mt-10 w-2/5 mx-auto">
+          <button
+            className="rounded-xl lg:w-1/3 mx-auto px-5 py-2 bg-[#14B9F1] text-white"
+            onClick={openModal}
+          >
+            Find matches
+          </button>
+          {isError && <p className="text-center mt-5 ">Udfyld felterne</p>}
+        </div>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
