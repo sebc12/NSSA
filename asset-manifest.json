@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Home/static/css/main.b1405873.css",
-    "main.js": "/Home/static/js/main.2911b374.js",
-    "static/js/787.f14c812e.chunk.js": "/Home/static/js/787.f14c812e.chunk.js",
-    "static/media/forside-web.png": "/Home/static/media/forside-web.8e0de5a7c28118fad119.png",
-    "static/media/forside.png": "/Home/static/media/forside.0e36e8a079be33fea3e6.png",
-    "index.html": "/Home/index.html",
-    "main.b1405873.css.map": "/Home/static/css/main.b1405873.css.map",
-    "main.2911b374.js.map": "/Home/static/js/main.2911b374.js.map",
-    "787.f14c812e.chunk.js.map": "/Home/static/js/787.f14c812e.chunk.js.map"
+    "main.css": "/repo/static/css/main.b1405873.css",
+    "main.js": "/repo/static/js/main.9d216d11.js",
+    "static/js/787.f14c812e.chunk.js": "/repo/static/js/787.f14c812e.chunk.js",
+    "static/media/forside-web.png": "/repo/static/media/forside-web.8e0de5a7c28118fad119.png",
+    "static/media/forside.png": "/repo/static/media/forside.0e36e8a079be33fea3e6.png",
+    "index.html": "/repo/index.html",
+    "main.b1405873.css.map": "/repo/static/css/main.b1405873.css.map",
+    "main.9d216d11.js.map": "/repo/static/js/main.9d216d11.js.map",
+    "787.f14c812e.chunk.js.map": "/repo/static/js/787.f14c812e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1405873.css",
-    "static/js/main.2911b374.js"
+    "static/js/main.9d216d11.js"
   ]
 }
