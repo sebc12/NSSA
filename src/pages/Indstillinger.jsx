@@ -33,42 +33,48 @@ export default function Indstillinger() {
 
         <div className="md:pb-4 my-0 md:my-0 md:text-left flex-grow lg:w-1/2 lg:mx-auto">
           <div className="font-ibm text-white h-full py-10">
-            <Link
+            <a
+              href="#"
               to="/change-info"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Change Info
-            </Link>
-            <Link
+            </a>
+            <a
+              href="#"
               to="/help"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Help
-            </Link>
-            <Link
+            </a>
+            <a
+              href="#"
               to="/feedback"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Give Us Feedback
-            </Link>
-            <Link
+            </a>
+            <a
+              href="#"
               to="/feedback"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Give Us Feedback
-            </Link>
-            <Link
+            </a>
+            <a
+              href="#"
               to="/feedback"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Give Us Feedback
-            </Link>
-            <Link
+            </a>
+            <a
+              href="#"
               to="/feedback"
               className="block text-white hover:text-gray-300 font-bold text-xl border-b-2 border-gray-300 py-4"
             >
               Give Us Feedback
-            </Link>
+            </a>
           </div>
         </div>
       </div>
