@@ -16,8 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route index element={<NSSA />} />
+          <Route path="/" index element={<NSSA />}>
             <Route path="Signin" element={<Signin />} />
             <Route path="signup" element={<Signup />} />
             <Route element={<PrivateRoute />}>
