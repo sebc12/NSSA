@@ -109,7 +109,7 @@ export default function SignUp() {
       />
       <div className="flex lg:justify-between items-center text-white text-3xl mx-5 pt-5 lg:mx-10 lg:pt-10 ">
         <div>
-          <Link to="/">
+          <Link to="/NSSA">
             <FaArrowLeft />
           </Link>
         </div>

@@ -98,7 +98,7 @@ export default function Home() {
         alt=""
       />
       <div className="flex items-center text-white text-2xl mx-10 pt-10 mb-40 lg:px-5">
-        <Link to="/">
+        <Link to="/NSSA">
           <FaArrowLeft />
         </Link>
         <Link to="/Menu" className="w-full flex justify-center mr-6">

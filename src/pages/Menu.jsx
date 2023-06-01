@@ -11,7 +11,7 @@ export default function Menu() {
   const navigate = useNavigate();
   const handleSignout = () => {
     localStorage.clear();
-    navigate("/");
+    navigate("/NSSA");
   };
   return (
     <div className="min-h-screen relative">
