@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/NSSA/static/css/main.b1405873.css",
-    "main.js": "/NSSA/static/js/main.75235f6d.js",
+    "main.js": "/NSSA/static/js/main.d4442064.js",
     "static/js/787.f14c812e.chunk.js": "/NSSA/static/js/787.f14c812e.chunk.js",
     "static/media/forside-web.png": "/NSSA/static/media/forside-web.8e0de5a7c28118fad119.png",
     "static/media/forside.png": "/NSSA/static/media/forside.0e36e8a079be33fea3e6.png",
     "index.html": "/NSSA/index.html",
     "main.b1405873.css.map": "/NSSA/static/css/main.b1405873.css.map",
-    "main.75235f6d.js.map": "/NSSA/static/js/main.75235f6d.js.map",
+    "main.d4442064.js.map": "/NSSA/static/js/main.d4442064.js.map",
     "787.f14c812e.chunk.js.map": "/NSSA/static/js/787.f14c812e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1405873.css",
-    "static/js/main.75235f6d.js"
+    "static/js/main.d4442064.js"
   ]
 }
