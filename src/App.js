@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import NSSA from "./pages/NSSA";
+import Home from "./pages/Home";
 import Signin from "./pages/auth/Signin";
 import Signup from "./pages/auth/Signup";
 import Menu from "./pages/Menu";
@@ -16,7 +16,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" index element={<NSSA />}>
+          <Route path="/">
+            <Route index path="NSSA" element={<Home />} />
             <Route path="Signin" element={<Signin />} />
             <Route path="signup" element={<Signup />} />
             <Route element={<PrivateRoute />}>
