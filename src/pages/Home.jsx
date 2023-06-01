@@ -22,12 +22,12 @@ export default function Home() {
           <img className="mx-auto pt-10 px-10" src={logo} alt="logo"></img>
         </div>
         <div className="lg:pb-40 my-auto lg:my-0 space-x-10">
-          <Link to="/signin">
+          <Link to="/Signin">
             <button className="border rounded-lg bg-[#1FB9F1] text-white px-10 py-3 lg:px-12 lg:py-4 ">
               Login
             </button>
           </Link>
-          <Link to="/signup">
+          <Link to="/Signup">
             <button className="border rounded-lg bg-white text-[#021965] px-10 py-3 lg:px-12 lg:py-4">
               Opret
             </button>
