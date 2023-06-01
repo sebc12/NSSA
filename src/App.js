@@ -18,14 +18,14 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index path="NSSA" element={<Home />} />
-            <Route path="NSSA/Signin" element={<Signin />} />
-            <Route path="NSSA/signup" element={<Signup />} />
+            <Route path="/Signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
             <Route element={<PrivateRoute />}>
-              <Route path="NSSA/menu" element={<Menu />} />
-              <Route path="NSSA/kontakt" element={<Kontakt />} />
-              <Route path="NSSA/matchmaking" element={<Matchmaking />} />
-              <Route path="NSSA/indstillinger" element={<Indstillinger />} />
-              <Route path="NSSA/matches" element={<Matches />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/matchmaking" element={<Matchmaking />} />
+              <Route path="/indstillinger" element={<Indstillinger />} />
+              <Route path="/matches" element={<Matches />} />
             </Route>
 
             <Route path="*" />
